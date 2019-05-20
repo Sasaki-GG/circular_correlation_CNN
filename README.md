@@ -14,7 +14,7 @@ suppose a, b are vectors with same length, than  a@b = ans
 ## Operation
 
 rotate left of vector a to construct matix:
-`
+```
   a_0, a_1, .. a_n-1
   
   a_1, a_2, .. a_0
@@ -24,7 +24,7 @@ rotate left of vector a to construct matix:
   .
   
   a_n-1, ..
-` 
+```
 
 set b as conv_kernel , and than just the same as CNN
 
@@ -32,7 +32,7 @@ set b as conv_kernel , and than just the same as CNN
 
 (We use SmoothL1Loss instead to fit 100 dim)
 
-##Test
+## Test
 written by PyTorch , python3
 
 train & test:
