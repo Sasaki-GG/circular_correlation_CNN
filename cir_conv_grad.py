@@ -56,7 +56,7 @@ def calc_grad(x, kernel, y, dim, reverse=False):
     #优化器: adam, loss: L2 
     # optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
     optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
-    loss_function = nn.SmoothL1Loss()
+    loss_function = nn.MSELoss()
     # print ('Input\n',x)
     #相当于一个epoch
     for epoch in range(1):
@@ -102,11 +102,17 @@ def mse(a, b):
         ans += (a[i]-b[i])*(a[i]-b[i])
     return ans/dim
 
+def normalize(a):
+    tmp = 0
+    for x in a:
+       tmp += x*x
+    return a/math.sqrt(tmp) 
+
 if __name__ == "__main__":
-    x = np.random.rand(100)
-    w = np.random.rand(100)
-    y = np.random.rand(100)
-    loss_function = nn.SmoothL1Loss()
+    x = normalize(np.random.rand(100))
+    w = normalize(np.random.rand(100))
+    y = normalize(np.random.rand(100))
+    loss_function = nn.MSELoss()
     y_pre = cir_mul(x, w, x.shape)
     yp = torch.autograd.Variable(torch.from_numpy(y_pre))
     yt = torch.autograd.Variable(torch.from_numpy(y))
