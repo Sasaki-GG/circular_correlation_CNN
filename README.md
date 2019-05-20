@@ -1,6 +1,8 @@
 # circular_correlation_CNN
 circular correlation with CNN
 
+single Layer CNN
+
 ## Definition
 circular correlation (@) can be defined as following:
 
