@@ -27,9 +27,9 @@ rotate left of vector a to construct matix:
 
 set b as conv_kernel , and than just the same as CNN
 
-(Attention: dimension over 40 may cause Gradient explosion when use **L2/MSEloss**)
+(Attention: please normalize vectors when use **L2/MSEloss** or others)
 
-(We use **SmoothL1Loss** instead to fit 100 dim)
+(We use **SmoothL1Loss** to test)
 
 ## Test
 written by PyTorch , python3
