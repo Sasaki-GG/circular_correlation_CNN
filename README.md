@@ -3,6 +3,7 @@ circular correlation with CNN
 
 ## Definition
 circular correlation (@) can be defined as following:
+
 suppose a, b are vectors with same length, than  a@b = ans
 
     ans = np.zeros(dim)
@@ -32,5 +33,6 @@ set b as conv_kernel , and than just the same as CNN
 written by PyTorch , python3
 
 train & test:
+
 ```   python cir_conv_grad.py ```
  
